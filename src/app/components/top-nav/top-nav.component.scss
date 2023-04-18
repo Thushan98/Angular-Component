@@ -1,0 +1,42 @@
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: var(--spacing-four);
+  padding: var(--spacing-half);
+  border: 1px solid var(--color-night-grey);
+
+  &__logo-section {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    padding: var(--spacing-half);
+    width: var(--spacing-two);
+    cursor: pointer;
+    transition: transform 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  &__center-tabs {
+    padding: var(--spacing-half);
+    color: var(--color-b-100);
+    text-transform: uppercase;
+    font-size: var(--spacing-one);
+  }
+  &__tabs {
+    padding: var(--spacing-half);
+    cursor: pointer;
+    &:active {
+      background-color: var(--color-b-dark);
+    }
+  }
+  &__right-tabs {
+    padding: var(--spacing-half);
+    display: flex;
+  }
+}
