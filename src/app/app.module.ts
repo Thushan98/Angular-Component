@@ -8,9 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
+//import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [AppComponent, TopNavComponent],
+  declarations: [AppComponent, TopNavComponent, SidebarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
