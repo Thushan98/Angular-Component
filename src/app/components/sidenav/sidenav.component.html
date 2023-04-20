@@ -1,0 +1,215 @@
+<div class="side-nav" [class.side-nav--collapsed]="!isExpanded" #sidenav>
+  <div
+    class="top-scroll-indicator"
+    [hidden]="
+      indicatorPos !== IndicatorPos.TOP && indicatorPos !== IndicatorPos.BOTH
+    "
+  ></div>
+
+  <ng-container *ngFor="let item of items">
+    <p *ngIf="!!item?.category && isExpanded" class="side-nav__item-category">
+      {{ item.category }}
+    </p>
+    <div
+      *ngIf="!!item?.category && !isExpanded"
+      class="side-nav__item-category--collapsed"
+    >
+      <hr />
+    </div>
+    <div
+      class="side-nav__item"
+      [class.side-nav__item--active]="
+        item?.isActive || (getActiveChildrenState(item) && !isExpanded)
+      "
+      (click)="onItemClick(item)"
+      [matTooltip]="item.label"
+      [matTooltipPosition]="'right'"
+      [matTooltipDisabled]="isExpanded"
+    >
+      <span
+        *ngIf="item?.isActive || (getActiveChildrenState(item) && !isExpanded)"
+        class="side-nav__item--active-indicator"
+      ></span>
+      <mat-icon *ngIf="item?.icon" class="side-nav__item-icon">{{
+        item.icon
+      }}</mat-icon>
+      <p class="side-nav__item-label" *ngIf="isExpanded">{{ item.label }}</p>
+      <mat-icon
+        *ngIf="!!item?.children && isExpanded"
+        class="side-nav__item-icon-toggle"
+        >{{
+          item.isExpanded && isExpanded ? "arrow_drop_up" : "arrow_drop_down"
+        }}
+      </mat-icon>
+    </div>
+
+    <div
+      *ngIf="item?.children"
+      class="side-nav__children"
+      [@sidenavToggeling]="
+        item?.isExpanded && isExpanded ? 'expanded' : 'collapsed'
+      "
+    >
+      <ng-container
+        *ngFor="let child of item?.children; let i = index; let last = last"
+      >
+        <div class="side-nav__child-container">
+          <div class="side-nav__line">
+            <ng-container *ngIf="!last">
+              <span class="side-nav__line--vl">
+                <svg
+                  width="2"
+                  height="42"
+                  viewBox="0 0 2 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M1 41v1" stroke="#c4d5c4" stroke-linecap="round" />
+                </svg>
+                <ng-container *ngIf="!!child?.children">
+                  <ng-container
+                    *ngFor="let line of child.children; let j = index"
+                  >
+                    <svg
+                      [ngStyle]="{
+                        'top.px': 40 * (j + 1),
+                        position: 'absolute',
+                        left: 0
+                      }"
+                      width="2"
+                      height="42"
+                      viewBox="0 0 2 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1V17C1 19.2091 2.79086 21 5 21H9"
+                        stroke="#c4d5c4"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </ng-container>
+                </ng-container>
+              </span>
+            </ng-container>
+            <span class="side-nav__line--hl">
+              <svg
+                width="10"
+                height="22"
+                viewBox="0 0 10 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1V17C1 19.2091 2.79086 21 5 21H9"
+                  stroke="#c4d5c4"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            class="side-nav__item"
+            [class.side-nav__item--active]="child?.isActive"
+            (click)="onItemClick(child)"
+          >
+            <span
+              *ngIf="child?.isActive"
+              class="side-nav__item--active-indicator"
+            ></span>
+            <p class="side-nav__item-label" *ngIf="isExpanded">
+              {{ child.label }}
+            </p>
+            <mat-icon
+              class="side-nav__item-icon-toggle"
+              *ngIf="!!child?.children && isExpanded"
+              >{{
+                child.isExpanded && isExpanded
+                  ? "arrow_drop_up"
+                  : "arrow_drop_down"
+              }}
+            </mat-icon>
+          </div>
+        </div>
+        <div
+          class="side-nav__grand-children"
+          *ngIf="child?.children"
+          [@sidenavToggeling]="
+            child?.isExpanded && isExpanded ? 'expanded' : 'collapsed'
+          "
+        >
+          <ng-container
+            *ngFor="
+              let grandChild of child?.children;
+              let i = index;
+              let last = last
+            "
+          >
+            <div class="side-nav__grand-child-container">
+              <div class="side-nav__line">
+                <span class="side-nav__line--vl" *ngIf="!last">
+                  <svg
+                    width="2"
+                    height="42"
+                    viewBox="0 0 2 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 41V1" stroke="#c4d5c4" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="side-nav__line--hl">
+                  <svg
+                    width="10"
+                    height="22"
+                    viewBox="0 0 10 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1V17C1 19.2091 2.79086 21 5 21H9"
+                      stroke="#c4d5c4"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="side-nav__item"
+                [class.side-nav-__item--active]="grandChild?.isActive"
+                (click)="onItemClick(grandChild)"
+              >
+                <span
+                  class="side-nav__item--active-indicator"
+                  *ngIf="grandChild?.isActive"
+                ></span>
+                <p class="side-nav__item-label" *ngIf="isExpanded">
+                  {{ grandChild.label }}
+                </p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+  <div
+    class="bottom-scroll-indicator"
+    [hidden]="
+      indicatorPos !== IndicatorPos.BOTTOM && indicatorPos !== IndicatorPos.BOTH
+    "
+  ></div>
+</div>
+<div class="side-nav__item__toggler">
+  <div
+    class="side-nav__item side-nav__item__toggler"
+    (click)="toggleSideNav()"
+    (mouseenter)="setToggleIcon('in')"
+    (mouseleave)="setToggleIcon('out')"
+    [matTooltip]="'Expand'"
+    [matTooltipDisabled]="isExpanded"
+    [matTooltipPosition]="'right'"
+  >
+    <mat-icon class="side-nav__item-icon">{{ toggleIcon }}</mat-icon>
+  </div>
+</div>

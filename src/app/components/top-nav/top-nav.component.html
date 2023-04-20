@@ -3,12 +3,12 @@
     <img src="../../../assets/favicon.ico" class="topnav__logo" />
   </div>
   <div class="topnav__center-tabs">
-    <span class="topnav__tabs" *ngFor="let tab of tabs" [routerLink]="tab.link">
+    <span class="topnav__tabs" *ngFor="let tab of tabs" >
       {{ tab.name }}
     </span>
   </div>
   <div class="topnav__right-tabs">
-    <button mat-raised-button color="primary" style="margin: 4px">Basic</button>
+    <button mat-raised-button color="primary" style="margin: 4px">SignUp</button>
     <button mat-stroked-button color="primary" style="margin: 4px">
       Login
     </button>
