@@ -1,64 +1,88 @@
 import { Component } from '@angular/core';
-import { SideNavItem } from './side-nav-item';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { SideNavItem } from '../sidenav/side-nav-item';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent {
-  
+  constructor(private readonly router: Router) {}
+
   items: Array<SideNavItem> = [
     {
       id: 0,
-      label: 'Higher',
+      label: 'Parent Tab 1',
       isActive: true,
+      category: 'category1',
       icon: 'group_add',
       children: [
         {
           id: 11,
-          label: 'Undergraduate',
+          label: 'Child Tab 1',
           onClick: () => {
-            this.router.navigateByUrl('under');
+            this.router.navigateByUrl('');
           },
           children: [
             {
               id: 111,
-              label: '1st',
-              onClick: ()=> {
-                this.router.navigateByUrl('1st');
-              }
-            }
-          ]
-        }
-      ]
+              label: 'Grand Child 1',
+              onClick: () => {
+                this.router.navigateByUrl('');
+              },
+            },
+            {
+              id: 112,
+              label: 'Grand Child 2',
+              onClick: () => {
+                this.router.navigateByUrl('');
+              },
+            },
+          ],
+        },
+        {
+          id: 12,
+          label: 'Child Tab 1',
+          onClick: () => {
+            this.router.navigateByUrl('');
+          },
+          children: [
+            {
+              id: 111,
+              label: 'Grand Child 1',
+              onClick: () => {
+                this.router.navigateByUrl('');
+              },
+            },
+          ],
+        },
+      ],
     },
     {
       id: 1,
-      label: 'gfgfg',
+      label: 'Parent Tab 2',
       isActive: true,
+      category: 'category2',
       icon: 'group_add',
       children: [
         {
           id: 21,
-          label: 'Undergraduate',
+          label: 'Child 1',
           onClick: () => {
-            this.router.navigateByUrl('under');
+            this.router.navigateByUrl('');
           },
           children: [
             {
               id: 211,
-              label: '1st',
-              onClick: ()=> {
-                this.router.navigateByUrl('1st');
-              }
-            }
-          ]
-        }
-      ]
-    }
-
+              label: 'Grand Child',
+              onClick: () => {
+                this.router.navigateByUrl('');
+              },
+            },
+          ],
+        },
+      ],
+    },
   ];
-  constructor (private readonly router: Router) {}
 }

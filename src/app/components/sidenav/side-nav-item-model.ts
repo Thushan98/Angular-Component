@@ -1,5 +1,5 @@
 export interface DSSideNavItem {
-  id: string | number;
+  id: number | string;
   label: string;
   icon?: string;
   children?: Array<DSSideNavChildItem>;
@@ -10,7 +10,7 @@ export interface DSSideNavItem {
 }
 
 export interface DSSideNavChildItem {
-  id: string;
+  id: number | string;
   label: string;
   children?: Array<DSSideNavChildItem>;
   isExpanded?: boolean;

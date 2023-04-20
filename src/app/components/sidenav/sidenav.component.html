@@ -39,14 +39,14 @@
         class="side-nav__item-icon-toggle"
         >{{
           item.isExpanded && isExpanded ? "arrow_drop_up" : "arrow_drop_down"
-        }}</mat-icon
-      >
+        }}
+      </mat-icon>
     </div>
 
     <div
       *ngIf="item?.children"
       class="side-nav__children"
-      [@sidenavToggleing]="
+      [@sidenavToggeling]="
         item?.isExpanded && isExpanded ? 'expanded' : 'collapsed'
       "
     >
@@ -100,7 +100,11 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M1 41v1" stroke="#c4d5c4" stroke-linecap="round" />
+                <path
+                  d="M1 1V17C1 19.2091 2.79086 21 5 21H9"
+                  stroke="#c4d5c4"
+                  stroke-linecap="round"
+                />
               </svg>
             </span>
           </div>
@@ -121,8 +125,8 @@
               *ngIf="!!child?.children && isExpanded"
               >{{
                 child.isExpanded && isExpanded
-                  ? "arrow_drop_down"
-                  : "arrow_drop_up"
+                  ? "arrow_drop_up"
+                  : "arrow_drop_down"
               }}
             </mat-icon>
           </div>
@@ -130,7 +134,7 @@
         <div
           class="side-nav__grand-children"
           *ngIf="child?.children"
-          [@sidenavToggleing]="
+          [@sidenavToggeling]="
             child?.isExpanded && isExpanded ? 'expanded' : 'collapsed'
           "
         >
@@ -194,7 +198,6 @@
     [hidden]="
       indicatorPos !== IndicatorPos.BOTTOM && indicatorPos !== IndicatorPos.BOTH
     "
-    ]
   ></div>
 </div>
 <div class="side-nav__item__toggler">

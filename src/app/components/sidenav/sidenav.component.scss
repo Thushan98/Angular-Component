@@ -93,6 +93,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        margin-top: calc(var(--spacing-three-quarter) + 2px);
       }
 
       &:hover {

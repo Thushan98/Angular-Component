@@ -16,7 +16,7 @@ import { IndicatorPos, TogglerIcon } from './types';
 import { DSSideNavChildItem, DSSideNavItem } from './side-nav-item-model';
 import { fromEvent, Subject } from 'rxjs';
 import { debounceTime, takeUntil } from 'rxjs/operators';
-//import { sidenavToogling } from '../animations';
+import { sidenavToggeling } from '../animation';
 
 @Component({
   selector: 'app-sidenav',
@@ -24,7 +24,7 @@ import { debounceTime, takeUntil } from 'rxjs/operators';
   styleUrls: ['./sidenav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
-  animations: [],
+  animations: [sidenavToggeling],
   host: {
     class: 'side-nav-container',
     '[class.side-nav-container--collapsed]': '!isExpanded',
@@ -150,22 +150,22 @@ export class DSSidenavComponent implements AfterViewInit, OnDestroy {
   }
 
   private setIndicatorsPosition(): void {
-  //   const { scrollHeight, scrollTop, offsetHeight } =
-  //     this.sidenav.nativeElement;
-  //   const { clientHeight } = this.elementRef.nativeElement;
+    const { scrollHeight, scrollTop, offsetHeight }: any =
+      this.sidenav?.nativeElement;
+    const { clientHeight } = this.elementRef.nativeElement;
 
-  //   if (scrollTop !== 0 && scrollTop === scrollHeight - offsetHeight) {
-  //     this.indicatorPos = IndicatorPos.TOP;
-  //     return;
-  //   }
-  //   if (scrollTop == 0 && scrollHeight > clientHeight) {
-  //     this.indicatorPos = IndicatorPos.BOTTOM;
-  //     return;
-  //   }
-  //   if (scrollTop !== 0 && scrollHeight > clientHeight) {
-  //     this.indicatorPos = IndicatorPos.BOTH;
-  //     return;
-  //   }
-  //   this.indicatorPos = IndicatorPos.NONE;
-   }
+    if (scrollTop !== 0 && scrollTop === scrollHeight - offsetHeight) {
+      this.indicatorPos = IndicatorPos.TOP;
+      return;
+    }
+    if (scrollTop == 0 && scrollHeight > clientHeight) {
+      this.indicatorPos = IndicatorPos.BOTTOM;
+      return;
+    }
+    if (scrollTop !== 0 && scrollHeight > clientHeight) {
+      this.indicatorPos = IndicatorPos.BOTH;
+      return;
+    }
+    this.indicatorPos = IndicatorPos.NONE;
+  }
 }
