@@ -1,0 +1,47 @@
+<div class="form">
+  <app-wrapper>
+    <span class="form__form-section" appOutletLeft>
+      <h4>My Details</h4>
+      <form style="display: block" [formGroup]="formDetail">
+        <label for="nameInput">Name</label>
+        <input id="nameInput" type="text" formControlName="name"/>
+        <label for="emailInput">Email</label>
+        <input id="emailInput" type="text" formControlName="email"/>
+      </form>
+    </span>
+    <span class="form__form-section" style="margin-top: 18px" appOutletRight>
+      <h4></h4>
+      <form [formGroup]="formAddress">
+        <span style="display: flex">
+          <span style="width: 50%">
+            <label for="line1Input">Line 1</label>
+            <input id="linr1Input" type="text" formControlName="line1"/>
+          </span>
+          <span style="width: 50%">
+            <label for="line2Input">Line 2</label>
+            <input id="linr2Input" type="text" formControlName="line2"/>
+          </span>
+        </span>
+        <span style="display: flex">
+          <span style="width: 50%">
+            <label for="regionInput">Region</label>
+            <input id="regionInput" type="text" formControlName="region"/>
+          </span>
+          <span style="width: 50%">
+            <label for="countryInput">Country</label>
+            <select id="countryInput" type="text" formControlName="country">
+              <option selected></option>
+              <option>Sri Lanka</option>
+              <option>Australia</option>
+              <option>USA</option>
+            </select>
+          </span>
+        </span>
+      </form>
+    </span>
+    <span appOutButton class="buttonBar">
+        <button mat-raised-button color="primary" class="buttonBar__save-button" (click)="saveDetails()">Save</button>
+        <button mat-raised-button class="buttonBar__reset-button" (click)="resetForm()">Reset</button>
+    </span>
+  </app-wrapper>
+</div>
