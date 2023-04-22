@@ -12,39 +12,29 @@ export class SidebarComponent {
 
   items: Array<SideNavItem> = [
     {
-      id: 0,
+      id: 1,
       label: 'Forms',
       isActive: true,
-      category: 'Category 1',
       icon: 'group_add',
       children: [
         {
           id: 11,
-          label: 'Single form',
+          label: 'Single Form',
           onClick: () => {
             this.router.navigateByUrl('forms/single-form');
           }
         },
         {
           id: 12,
-          label: 'Child Tab 1',
+          label: 'Array of Forms',
           onClick: () => {
-            this.router.navigateByUrl('');
-          },
-          children: [
-            {
-              id: 111,
-              label: 'Grand Child 1',
-              onClick: () => {
-                this.router.navigateByUrl('');
-              },
-            },
-          ],
-        },
+            this.router.navigateByUrl('forms/array-form');
+          }
+        }
       ],
     },
     {
-      id: 1,
+      id: 2,
       label: 'Parent Tab 2',
       isActive: true,
       category: 'category2',
