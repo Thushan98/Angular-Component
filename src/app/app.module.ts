@@ -14,6 +14,7 @@ import { TopNavComponent } from './common-components/top-nav/top-nav.component';
 import { DSSidenavComponent } from './common-components/sidenav/sidenav.component';
 import { SidebarComponent } from './common-components/sidebar/sidebar.component';
 import { OutletButtonDirective } from './common-components/wrapper/outlet-button.directive';
+import { BreadcrumbsComponent } from './common-components/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { OutletButtonDirective } from './common-components/wrapper/outlet-button
     DSSidenavComponent,
     SidebarComponent,
     OutletButtonDirective,
+    BreadcrumbsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,5 +39,6 @@ import { OutletButtonDirective } from './common-components/wrapper/outlet-button
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [BreadcrumbsComponent]
 })
 export class AppModule {}

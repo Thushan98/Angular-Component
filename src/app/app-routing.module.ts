@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { 
-    path: 'forms',
+    path: '',
+    data: {breadcrumb: 'Forms'},
     children: [
       {
         path: 'single-form',
