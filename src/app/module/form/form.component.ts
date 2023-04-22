@@ -6,21 +6,21 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent implements OnInit{
+export class FormComponent implements OnInit {
   constructor(private readonly formBuilder: FormBuilder) {}
 
   ngOnInit(): void {}
 
   formDetail = this.formBuilder.group({
     name: '',
-    email: ['', Validators.email]
+    email: ['', Validators.email],
   });
 
   formAddress = this.formBuilder.group({
     line1: '',
     line2: '',
     region: '',
-    country: ''
+    country: '',
   });
 
   resetForm() {

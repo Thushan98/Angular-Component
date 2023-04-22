@@ -191,9 +191,9 @@ mat-icon.side-nav__icon-toggle {
 }
 
 .flipped {
-    mat-icon {
-        transform: rotate(-180deg);
-    }
+  mat-icon {
+    transform: rotate(-180deg);
+  }
 }
 
 .side-nav__item__toggler {
@@ -218,11 +218,11 @@ mat-icon.side-nav__icon-toggle {
 }
 
 .bottom-scroll-indicator {
-    position: absolute;
-    width: 100%;
-    height: var(--spacing-three);
-    background: linear-gradient(0deg, white, transparent);
-    z-index: 2;
-    pointer-events: none;
-    bottom: calc(var(--spacing-three) + 1px)
+  position: absolute;
+  width: 100%;
+  height: var(--spacing-three);
+  background: linear-gradient(0deg, white, transparent);
+  z-index: 2;
+  pointer-events: none;
+  bottom: calc(var(--spacing-three) + 1px);
 }

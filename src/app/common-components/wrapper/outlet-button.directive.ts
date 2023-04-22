@@ -1,10 +1,8 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[appOutletButton]'
+  selector: '[appOutletButton]',
 })
 export class OutletButtonDirective {
-
-  constructor() { }
-
+  constructor() {}
 }
