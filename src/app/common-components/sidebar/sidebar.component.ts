@@ -22,15 +22,15 @@ export class SidebarComponent {
           label: 'Single Form',
           onClick: () => {
             this.router.navigateByUrl('forms/single-form');
-          }
+          },
         },
         {
           id: 12,
           label: 'Array of Forms',
           onClick: () => {
             this.router.navigateByUrl('forms/array-form');
-          }
-        }
+          },
+        },
       ],
     },
     {

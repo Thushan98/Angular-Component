@@ -1,4 +1,4 @@
 export interface BreadCrumbs {
-    label: string;
-    url: string;
+  label: string;
+  url: string;
 }
