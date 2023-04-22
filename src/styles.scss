@@ -1,16 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
-@import './space.scss';
-@import './colors.scss';
-@import './font-size.scss';
-@import './border-size.scss';
+@import "./space.scss";
+@import "./colors.scss";
+@import "./font-size.scss";
+@import "./border-size.scss";
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: 'Noto Sans';
+  margin: 0;
+  font-family: "Noto Sans", Roboto, "Helvetica Neue", sans-serif;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-family: "Noto Sans ";
+  font-weight: bolder;
+}
+
+label {
+  display: block;
+  margin-top: var(--spacing-half);
+  font-family: "Noto Sans", Roboto;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+input,select {
+    width: 96%;
+    border: var(--spacing-eight) solid var(--color-g-night);
+    border-radius: var(--border-width-l);
+    height: var(--spacing-one-and-half); 
+    background-color: var(--color-n-input);
+    font-size: var(--font-size-one);  
+    font-family: "Noto Sans", Roboto;
+    
+    &:hover {
+        background-color: var(--color-g-40); 
+        border-color: var(--color-g-dark);
+    }
+}
+
+.mat-mdc-raised-button.mat-primary {
+    --mdc-protected-button-container-color: var(--color-g-dark);
+    --mdc-protected-button-label-text-color: #fff;
+  }
+  
+  .mat-mdc-outlined-button.mat-primary {
+    --mdc-outlined-button-label-text-color: var(--color-g-night);
+  }

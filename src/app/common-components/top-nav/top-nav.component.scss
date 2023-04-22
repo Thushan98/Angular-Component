@@ -40,11 +40,3 @@
     display: flex;
   }
 }
-.mat-mdc-raised-button.mat-primary {
-  --mdc-protected-button-container-color: var(--color-g-dark);
-  --mdc-protected-button-label-text-color: #fff;
-}
-
-.mat-mdc-outlined-button.mat-primary {
-  --mdc-outlined-button-label-text-color: var(--color-g-night);
-}

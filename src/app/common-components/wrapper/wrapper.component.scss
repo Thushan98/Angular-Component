@@ -1,0 +1,35 @@
+.outlet-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(95vh - 68px);
+  box-sizing: border-box;
+  gap: var(--spacing-half);
+  overflow-y: auto;
+
+  &-form {
+    display: flex;
+    gap: var(--spacing-half);
+    width: 100%;
+
+    &-left {
+      display: flex;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    &-right {
+      display: flex;
+      flex-grow: 1;
+      flex-basis: 0;
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    &-button {
+      width: 100%;
+      position: relative;
+    }
+  }
+}
