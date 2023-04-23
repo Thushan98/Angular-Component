@@ -6,10 +6,9 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
   constructor(private readonly formBuilder: FormBuilder) {}
 
-  ngOnInit(): void {}
 
   formDetail = this.formBuilder.group({
     name: '',

@@ -1,0 +1,106 @@
+<div class="form-array">
+  <app-wrapper>
+    <span class="form-array__form-section" appOutletLeft>
+      <h4>Address Details</h4>
+      <form [formGroup]="addressDetailForm">
+        <ng-container
+          formArrayName="addressDetailArray"
+          *ngFor="let address of addressDetailArrayData.controls; let i = index"
+        >
+          <span
+            style="display: flex; margin-bottom: -15px"
+            *ngIf="addressDetailArrayData.controls.length > 1"
+          >
+            <p>Address {{ i + 1 }}</p>
+            <p class="form-array__form-text" (click)="remove(i)">remove</p>
+          </span>
+          <span style="display: block" [formGroupName]="i">
+            <span style="display: flex">
+              <span style="width: 50%">
+                <label for="line1Input">Line 1</label>
+                <input
+                  [id]="'line1Input' + i"
+                  type="text"
+                  formControlName="line1"
+                />
+              </span>
+              <span style="width: 50%">
+                <label for="line2Input">Line 2</label>
+                <input
+                  [id]="'line2Input' + i"
+                  type="text"
+                  formControlName="line2"
+                />
+              </span>
+            </span>
+            <span style="display: flex">
+              <span style="width: 50%">
+                <label for="cityInput">City</label>
+                <input
+                  [id]="'cityInput' + i"
+                  type="text"
+                  formControlName="city"
+                />
+              </span>
+              <span style="width: 50%">
+                <label for="regionInput">Region</label>
+                <input
+                  [id]="'regionInput' + i"
+                  type="text"
+                  formControlName="region"
+                />
+              </span>
+            </span>
+            <span style="display: flex">
+              <span style="width: 50%">
+                <label for="postalCodeInput">Postal Code</label>
+                <input
+                  [id]="'postalCodeInput' + i"
+                  type="text"
+                  formControlName="postalCode"
+                />
+              </span>
+              <span style="width: 50%">
+                <label for="countryInput">Country</label>
+                <select
+                  [id]="'countryInput' + i"
+                  type="text"
+                  formControlName="country"
+                >
+                  <option selected>----</option>
+                  <option>Sri Lanka</option>
+                  <option>USA</option>
+                </select>
+              </span>
+            </span>
+            <p class="form-array__form-text" (click)="addAnother()">
+              Add another Address
+            </p>
+          </span>
+        </ng-container>
+      </form>
+    </span>
+    <span
+      class="form-array__form-section"
+      style="margin-top: 18px"
+      appOutletRight
+    ></span>
+    <span appOutButton class="form-array__buttonBar">
+      <button
+        mat-raised-button
+        color="primary"
+        class="form-array__buttonBar__save-button"
+        (click)="saveDetails()"
+      >
+        Save
+      </button>
+      <button
+        mat-raised-button
+        class="form-array__buttonBar__reset-button"
+        (click)="resetForm()"
+      >
+        Reset
+      </button>
+    </span>
+  </app-wrapper>
+</div>
