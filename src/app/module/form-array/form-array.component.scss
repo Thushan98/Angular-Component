@@ -1,0 +1,39 @@
+.form-array {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-half);
+  width: 100%;
+  margin: 0;
+
+  &__form-section {
+    width: 98%;
+    flex-direction: column;
+    gap: var(--spacing-quarter);
+    margin: var(--spacing-quarter);
+  }
+
+  &__form-text {
+    font-size: small;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__buttonBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 4px;
+  
+    &__save-button {
+      margin-right: 4px;
+      &:hover {
+        background-color: var(--color-g-night);
+      }
+    }
+    &__reset-button {
+      &:hover {
+        background-color: var(--color-n-reset);
+      }
+    }
+  }
+}
