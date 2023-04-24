@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +28,9 @@ import { TopnavModule } from './common-components/top-nav/topnav.module';
     ReactiveFormsModule,
     FormsModule,
     AppCommonModule,
-    SidenavModule,TopnavModule
+    SidenavModule,
+    TopnavModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -17,7 +17,9 @@ import { AppCommonModule } from 'src/app/common-components/app-common.module';
     FormRoutingModule,
     MatButtonModule,
     ReactiveFormsModule,
-    AppCommonModule
+    FormsModule,
+    AppCommonModule,
+    RouterModule
   ],
   exports: [],
 })
