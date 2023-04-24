@@ -1,0 +1,9 @@
+<ng-container *ngIf="types?.length">
+  <select [ngModel]="selectedIndex" (ngModelChange)="valueChanged($event)">
+    <option [ngValue]="null" selected>
+      {{ required ? "--Selected--" : "--None--" }}
+    </option>
+    <option *ngFor="let type of types" [value]="type?.id">
+      {{ type.name }}
+    </option>
+  </select> </ng-container>

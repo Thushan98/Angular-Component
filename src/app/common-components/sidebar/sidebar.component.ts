@@ -35,26 +35,26 @@ export class SidebarComponent {
     },
     {
       id: 2,
-      label: 'Parent Tab 2',
+      label: 'Types',
       isActive: true,
-      category: 'category2',
+      category: '',
       icon: 'group_add',
       children: [
         {
           id: 21,
-          label: 'Child 1',
+          label: 'Type 1',
           onClick: () => {
-            this.router.navigateByUrl('');
-          },
-          children: [
-            {
-              id: 211,
-              label: 'Grand Child',
-              onClick: () => {
-                this.router.navigateByUrl('');
-              },
-            },
-          ],
+            this.router.navigateByUrl('types/type1');
+          }
+          // children: [
+          //   {
+          //     id: 211,
+          //     label: 'Grand Child',
+          //     onClick: () => {
+          //       this.router.navigateByUrl('');
+          //     },
+          //   },
+          // ],
         },
       ],
     },

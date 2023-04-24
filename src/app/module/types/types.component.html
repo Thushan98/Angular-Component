@@ -1,0 +1,30 @@
+<div>
+    
+      <span class="" >
+        <h4>Types</h4>
+        <form style="display: block" [formGroup]="typeDetail">
+          <label for="countryInput">Country</label>
+           <app-type id="countryInput" [required]="true" [types]="countryTypes" formControlName="country"></app-type> 
+      </form>
+      </span>
+    
+    
+    <span class=""></span>
+    <span  class="buttonBar">
+      <button
+        mat-raised-button
+        color="primary"
+        class="buttonBar__save-button"
+        (click)="saveDetails()"
+      >
+        Save
+      </button>
+      <button
+        mat-raised-button
+        class="buttonBar__reset-button"
+        (click)="resetForm()"
+      >
+        Reset
+      </button>
+    </span>
+</div> 

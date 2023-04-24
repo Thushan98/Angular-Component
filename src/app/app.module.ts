@@ -5,40 +5,34 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { A11yModule } from '@angular/cdk/a11y';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopNavComponent } from './common-components/top-nav/top-nav.component';
-import { DSSidenavComponent } from './common-components/sidenav/sidenav.component';
 import { SidebarComponent } from './common-components/sidebar/sidebar.component';
-import { OutletButtonDirective } from './common-components/wrapper/outlet-button.directive';
-import { BreadcrumbsComponent } from './common-components/breadcrumbs/breadcrumbs.component';
+import { AppCommonModule } from './common-components/app-common.module';
+import { SidenavModule } from './common-components/sidenav/sidenav.module';
+import { TopnavModule } from './common-components/top-nav/topnav.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TopNavComponent,
-    DSSidenavComponent,
-    SidebarComponent,
-    OutletButtonDirective,
-    BreadcrumbsComponent,
-  ],
+  declarations: [AppComponent, SidebarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
-    A11yModule,
     MatIconModule,
     MatTooltipModule,
-    FormsModule,
     ReactiveFormsModule,
+    FormsModule,
+    AppCommonModule,
+    SidenavModule,
+    TopnavModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [BreadcrumbsComponent],
 })
 export class AppModule {}
