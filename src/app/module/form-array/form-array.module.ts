@@ -6,25 +6,18 @@ import { RouterModule } from '@angular/router';
 
 import { FormArrayRoutingModule } from './form-array-routing.module';
 import { FormArrayComponent } from './form-array.component';
-import { WrapperComponent } from 'src/app/common-components/wrapper/wrapper.component';
-import { OutletLeftDirective } from 'src/app/common-components/wrapper/outlet-left.directive';
-import { OutletRightDirective } from 'src/app/common-components/wrapper/outlet-right.directive';
+import { AppCommonModule } from 'src/app/common-components/app-common.module';
 
 @NgModule({
   declarations: [
     FormArrayComponent,
-    WrapperComponent,
-    OutletLeftDirective,
-    OutletRightDirective,
   ],
   imports: [
     CommonModule,
     FormArrayRoutingModule,
     MatButtonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-  ],
-  exports: [WrapperComponent, OutletLeftDirective, OutletRightDirective],
+    AppCommonModule,
+    ReactiveFormsModule
+  ]
 })
 export class FormArrayModule {}
