@@ -150,9 +150,7 @@ export class DSSidenavComponent implements AfterViewInit, OnDestroy {
   }
 
   private setIndicatorsPosition(): void {
-    const { scrollHeight, scrollTop, offsetHeight }: any =
-      // eslint-disable-next-line no-unsafe-optional-chaining
-      this.sidenav?.nativeElement;
+    const { scrollHeight, scrollTop, offsetHeight } = this.sidenav?.nativeElement || { scrollHeight: 0, scrollTop: 0, offsetHeight: 0 };
     const { clientHeight } = this.elementRef.nativeElement;
 
     if (scrollTop !== 0 && scrollTop === scrollHeight - offsetHeight) {

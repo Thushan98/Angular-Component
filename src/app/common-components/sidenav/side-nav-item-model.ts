@@ -16,4 +16,5 @@ export interface DSSideNavChildItem {
   isExpanded?: boolean;
   isActive?: boolean;
   onClick?: (item: DSSideNavChildItem) => void;
+  routerLink?: string;
 }
