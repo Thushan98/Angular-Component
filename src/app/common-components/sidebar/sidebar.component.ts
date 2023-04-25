@@ -20,16 +20,12 @@ export class SidebarComponent {
         {
           id: 11,
           label: 'Single Form',
-          onClick: () => {
-            this.router.navigateByUrl('forms/single-form');
-          },
+          routerLink: 'forms/single-form'
         },
         {
           id: 12,
           label: 'Array of Forms',
-          onClick: () => {
-            this.router.navigateByUrl('forms/array-form');
-          },
+          routerLink: 'forms/formArray'
         },
       ],
     },
@@ -43,9 +39,7 @@ export class SidebarComponent {
         {
           id: 21,
           label: 'Type 1',
-          onClick: () => {
-            this.router.navigateByUrl('types/type1');
-          }
+          routerLink: 'types/type'
           // children: [
           //   {
           //     id: 211,

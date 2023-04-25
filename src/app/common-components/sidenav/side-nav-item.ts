@@ -7,4 +7,5 @@ export interface SideNavItem {
   category?: string;
   isExpanded?: boolean;
   onClick?: (item: SideNavItem) => void;
+  routerLink?: string;
 }
