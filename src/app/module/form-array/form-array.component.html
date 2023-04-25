@@ -1,6 +1,6 @@
 <div class="form-array">
-
-    <span class="form-array__form-section">
+  <app-wrapper>
+    <span class="form-array__form-section" appOutletLeft>
       <h4>Address Details</h4>
       <form [formGroup]="addressDetailForm">
         <ng-container
@@ -83,9 +83,9 @@
     <span
       class="form-array__form-section"
       style="margin-top: 18px"
-      
+      appOutletRight
     ></span>
-    <span class="form-array__buttonBar">
+    <span class="form-array__buttonBar" appOutletButton>
       <button
         mat-raised-button
         color="primary"
@@ -102,5 +102,5 @@
         Reset
       </button>
     </span>
-
+  </app-wrapper>
 </div>

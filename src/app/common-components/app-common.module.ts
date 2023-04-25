@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { WrapperComponent } from 'src/app/common-components/wrapper/wrapper.component';
-import { OutletLeftDirective } from 'src/app/common-components/wrapper/outlet-left.directive';
-import { OutletRightDirective } from 'src/app/common-components/wrapper/outlet-right.directive';
-import { OutletButtonDirective } from 'src/app/common-components/wrapper/outlet-button.directive';
+import { WrapperComponent } from './wrapper/wrapper.component';
+import { OutletButtonDirective } from './wrapper/outlet-button.directive';
+import { OutletLeftDirective } from './wrapper/outlet-left.directive';
+import { OutletRightDirective } from './wrapper/outlet-right.directive';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { TypeComponent } from './type/type.component';
 

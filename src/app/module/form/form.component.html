@@ -1,6 +1,6 @@
 <div class="form">
-  
-    <span class="form__form-section">
+  <app-wrapper>
+    <span class="form__form-section" appOutletLeft>
       <h4>My Details</h4>
       <form style="display: block" [formGroup]="formDetail">
         <label for="nameInput">Name</label>
@@ -9,7 +9,7 @@
         <input id="emailInput" type="text" formControlName="email" />
       </form>
     </span>
-    <span class="form__form-section" style="margin-top: 18px" >
+    <span class="form__form-section" style="margin-top: 18px" appOutletRight>
       <h4></h4>
       <form [formGroup]="formAddress">
         <span style="display: flex">
@@ -39,7 +39,7 @@
         </span>
       </form>
     </span>
-    <span  class="buttonBar">
+    <span class="buttonBar" appOutletButton>
       <button
         mat-raised-button
         color="primary"
@@ -56,5 +56,5 @@
         Reset
       </button>
     </span>
-
+  </app-wrapper>
 </div>

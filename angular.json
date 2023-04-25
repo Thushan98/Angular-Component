@@ -53,7 +53,8 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
-            }
+            },
+            "aot": true
           },
           "defaultConfiguration": "production"
         },
