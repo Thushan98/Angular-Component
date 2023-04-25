@@ -1,4 +1,20 @@
-.buttonBar {
+.types{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-half);
+  width: 100%;
+  margin: 0;
+  overflow-y: hidden;
+
+  &__form-section {
+    width: 98%;
+    flex-direction: column;
+    gap: var(--spacing-quarter);
+    margin: var(--spacing-quarter);
+  }
+
+
+ &__buttonBar {
   //position: absolute;
   top: 0;
   right: 0;
@@ -15,4 +31,4 @@
       background-color: var(--color-n-reset);
     }
   }
-}
+}}
