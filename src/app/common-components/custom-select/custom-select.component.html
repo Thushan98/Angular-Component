@@ -1,0 +1,42 @@
+<ng-container class="custom-select">
+  <div class="custom-select__selected-options">
+    <div
+      class="custom-select__selected-options__option"
+      *ngFor="let option of selectedOptions"
+    >
+      {{ option.name }}
+      <span
+        class="custom-select__selected-options__remove-icon"
+        (click)="removeOptions(option)"
+        >x</span
+      >
+    </div>
+    <div *ngIf="selectedOptions.length === 0">Select an option....</div>
+    <div class="custom-select__selected-options__drop-icon" #dropdownArrow>
+      <mat-icon>{{
+        isDropDownOpen ? "arrow_drop_up" : "arrow_drop_down"
+      }}</mat-icon>
+    </div>
+  </div>
+  <div
+    [ngClass]="{
+      'custom-select__dropdown-menu': !isDropDownOpen,
+      'custom-select__dropdown-menu--open': isDropDownOpen
+    }"
+  >
+    <div
+      *ngFor="let option of selectedOptions"
+      class="custom-select__dropdown-menu__option--selected"
+    >
+      {{ option.name }}
+    </div>
+    <ng-container *ngFor="let option of options">
+      <div
+        class="custom-select__dropdown-menu__option"
+        (click)="onSelect(option)"
+      >
+        {{ option.name }}
+      </div>
+    </ng-container>
+  </div>
+</ng-container>

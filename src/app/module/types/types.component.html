@@ -1,7 +1,7 @@
 <div class="types">
   <app-wrapper>
-    <span class="" appOutletLeft>
-      <h4>Types</h4>
+    <span class="types__form-section" appOutletLeft>
+      <h4>Normal Types</h4>
       <form style="display: block" [formGroup]="typeDetail">
         <label for="countryInput">Country</label>
         <app-type
@@ -12,20 +12,25 @@
         ></app-type>
       </form>
     </span>
-
-    <span class=""></span>
-    <span class="buttonBar" appOutletButton>
+    <span class="types__form-section" appOutletRight>
+      <h4>Custom Types</h4>
+      <form style="display: block" [formGroup]="customTypeDetail">
+        <label for="countryInput">Items</label>
+        <app-custom-select [options]="items" (optionSelected)="onOptionSelected($event)"></app-custom-select>
+      </form>
+    </span>
+    <span class="types__buttonBar" appOutletButton>
       <button
         mat-raised-button
         color="primary"
-        class="buttonBar__save-button"
+        class="types__buttonBar__save-button"
         (click)="saveDetails()"
       >
         Save
       </button>
       <button
         mat-raised-button
-        class="buttonBar__reset-button"
+        class="types__buttonBar__reset-button"
         (click)="resetForm()"
       >
         Reset
