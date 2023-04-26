@@ -1,0 +1,40 @@
+.filter {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-radius: var(--border-radius-small);
+  margin-bottom: var(--spacing-half);
+
+  &__input {
+    border-style: none;
+    font-style: inherit;
+  }
+  &__input:focus,
+  &__input:hover {
+    border-bottom: var(--border-width-s);
+    outline: none;
+    background-color: var(--color-g-20);
+    box-shadow: inset 0 0 var(--spacing-eight) 0 var(--color-n-60);
+    border-radius: var(--border-radius-small);
+  }
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: var(--border-radius-small) solid transparent;
+  border-top: var(--border-radius-small) solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-table .mat-mdc-row:hover,
+.mat-mdc-table .mat-mdc-footer-row:hover {
+  background: var(--color-gray-hover);
+  border: var(--border-radius-small) var(--color-gray-primary) solid;
+}
+
+th {
+  position: sticky;
+  top: var(--spacing-one-and-half);
+}
+.highlight {
+  background-color: var(--color-g-20);
+}
