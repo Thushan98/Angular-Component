@@ -16,16 +16,17 @@ export class SidebarComponent {
       label: 'Forms',
       isActive: true,
       icon: 'group_add',
+      category: 'Forms',
       children: [
         {
           id: 11,
           label: 'Single Form',
-          routerLink: 'forms/single-form'
+          routerLink: 'forms/single-form',
         },
         {
           id: 12,
           label: 'Array of Forms',
-          routerLink: 'forms/formArray'
+          routerLink: 'forms/formArray',
         },
       ],
     },
@@ -33,13 +34,13 @@ export class SidebarComponent {
       id: 2,
       label: 'Types',
       isActive: true,
-      category: '',
+      category: 'Types',
       icon: 'group_add',
       children: [
         {
           id: 21,
           label: 'Type 1',
-          routerLink: 'types/type'
+          routerLink: 'types/type',
           // children: [
           //   {
           //     id: 211,
@@ -49,6 +50,20 @@ export class SidebarComponent {
           //     },
           //   },
           // ],
+        },
+      ],
+    },
+    {
+      id: 3,
+      label: 'Tables',
+      isActive: true,
+      icon: 'group_add',
+      category: 'Tables',
+      children: [
+        {
+          id: 31,
+          label: 'Mat Table',
+          routerLink: 'tables/mat-table',
         },
       ],
     },
