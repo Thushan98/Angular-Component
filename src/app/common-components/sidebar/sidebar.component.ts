@@ -67,5 +67,19 @@ export class SidebarComponent {
         },
       ],
     },
+    {
+      id: 4,
+      label: 'Groups',
+      isActive: true,
+      icon: 'group_add',
+      category: 'Groups',
+      children: [
+        {
+          id: 41,
+          label: 'Group Box',
+          routerLink: 'groups/grpBox',
+        },
+      ],
+    },
   ];
 }

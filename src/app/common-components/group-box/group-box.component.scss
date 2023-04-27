@@ -1,0 +1,30 @@
+.group-box {
+  top: var(--spacing-one);
+  border: calc(var(--spacing-thirty-second) * 2) solid var(--color-n-60);
+  padding: var(--spacing-three-quarter);
+  position: relative;
+  margin-bottom: var(--spacing-three-quarter);
+}
+
+.group-box:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: calc(50% - var(--spacing-two-and-half));
+  border-top: calc(2 * var(--spacing-thirty-second));
+  transform: translateX(-50%);
+}
+
+.group-name {
+  position: relative;
+  top: calc(-1 * var(--spacing-one-and-half));
+  padding: 0 var(--spacing-quarter);
+  color: var(--color-g-night);
+  background-color: var(--color-background);
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.group-content {
+  margin-top: calc(-1 * var(--spacing-one-and-half));
+}

@@ -44,6 +44,18 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'groups',
+    data: { breadcrumb: 'Group' },
+    children: [
+      {
+        path: 'grpBox',
+        loadChildren: () =>
+          import('./module/grp-box/grp-box.module').then(
+            (m) => m.GrpBoxModule),
+      },
+    ],
+  },
 ];
 
 @NgModule({
