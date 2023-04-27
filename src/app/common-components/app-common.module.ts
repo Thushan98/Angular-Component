@@ -14,6 +14,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { TypeComponent } from './type/type.component';
 import { CustomSelectComponent } from './custom-select/custom-select.component';
 import { TableComponent } from './table/table.component';
+import { GroupBoxComponent } from './group-box/group-box.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TableComponent } from './table/table.component';
     TypeComponent,
     CustomSelectComponent,
     TableComponent,
+    GroupBoxComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +46,7 @@ import { TableComponent } from './table/table.component';
     TypeComponent,
     CustomSelectComponent,
     TableComponent,
+    GroupBoxComponent
   ],
 })
 export class AppCommonModule {}
