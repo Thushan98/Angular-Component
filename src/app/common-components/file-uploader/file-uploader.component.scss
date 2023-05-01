@@ -1,0 +1,12 @@
+.file-uploader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .unsupport-msg {
+        color: var(--color-fail);
+        font-size: var(--font-size-three-quarters);
+        font-family: inherit;
+        text-align: right;
+    }
+}

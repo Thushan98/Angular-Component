@@ -1,0 +1,12 @@
+<app-wrapper>
+  <span appOutletLeft>
+    <form>
+      <label>Profile Image</label>
+      <app-file-uploader
+        [acceptedFile]="acceptedFile"
+        [maxSize]="5000000"
+      ></app-file-uploader>
+    </form>
+  </span>
+  <span appOutletRight></span>
+</app-wrapper>

@@ -51,8 +51,20 @@ const routes: Routes = [
       {
         path: 'grpBox',
         loadChildren: () =>
-          import('./module/grp-box/grp-box.module').then(
-            (m) => m.GrpBoxModule),
+          import('./module/grp-box/grp-box.module').then((m) => m.GrpBoxModule),
+      },
+    ],
+  },
+  {
+    path: 'uploader',
+    data: { breadcrumb: 'FileUpload' },
+    children: [
+      {
+        path: 'fileUpload',
+        loadChildren: () =>
+          import('./module/file-upload/file-upload.module').then(
+            (m) => m.FileUploadModule
+          ),
       },
     ],
   },
