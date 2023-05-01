@@ -15,6 +15,7 @@ import { TypeComponent } from './type/type.component';
 import { CustomSelectComponent } from './custom-select/custom-select.component';
 import { TableComponent } from './table/table.component';
 import { GroupBoxComponent } from './group-box/group-box.component';
+import { FileUploaderComponent } from './file-uploader/file-uploader.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { GroupBoxComponent } from './group-box/group-box.component';
     CustomSelectComponent,
     TableComponent,
     GroupBoxComponent,
+    FileUploaderComponent,
   ],
   imports: [
     CommonModule,
@@ -46,7 +48,8 @@ import { GroupBoxComponent } from './group-box/group-box.component';
     TypeComponent,
     CustomSelectComponent,
     TableComponent,
-    GroupBoxComponent
+    GroupBoxComponent,
+    FileUploaderComponent
   ],
 })
 export class AppCommonModule {}

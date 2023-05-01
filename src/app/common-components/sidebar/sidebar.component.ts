@@ -81,5 +81,19 @@ export class SidebarComponent {
         },
       ],
     },
+    {
+      id: 5,
+      label: 'Uploader',
+      isActive: true,
+      icon: 'group_add',
+      category: 'Uploaders',
+      children: [
+        {
+          id: 41,
+          label: 'File Uploader',
+          routerLink: 'uploader/fileUpload',
+        },
+      ],
+    },
   ];
 }
