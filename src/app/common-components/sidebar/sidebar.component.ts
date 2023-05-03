@@ -89,9 +89,28 @@ export class SidebarComponent {
       category: 'Uploaders',
       children: [
         {
-          id: 41,
+          id: 51,
           label: 'File Uploader',
           routerLink: 'uploader/fileUpload',
+        },
+      ],
+    },
+    {
+      id: 6,
+      label: 'Charts',
+      isActive: true,
+      icon: 'group_add',
+      category: 'Charts',
+      children: [
+        {
+          id: 61,
+          label: 'Bar Chart',
+          routerLink: 'charts/barchart',
+        },
+        {
+          id: 62,
+          label: 'Line Chart',
+          routerLink: 'charts/linechart',
         },
       ],
     },

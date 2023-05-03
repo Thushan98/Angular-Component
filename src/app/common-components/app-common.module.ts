@@ -16,6 +16,8 @@ import { CustomSelectComponent } from './custom-select/custom-select.component';
 import { TableComponent } from './table/table.component';
 import { GroupBoxComponent } from './group-box/group-box.component';
 import { FileUploaderComponent } from './file-uploader/file-uploader.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { FileUploaderComponent } from './file-uploader/file-uploader.component';
     TableComponent,
     GroupBoxComponent,
     FileUploaderComponent,
+    BarChartComponent,
+    LineChartComponent,
   ],
   imports: [
     CommonModule,
@@ -48,8 +52,10 @@ import { FileUploaderComponent } from './file-uploader/file-uploader.component';
     TypeComponent,
     CustomSelectComponent,
     TableComponent,
+    BarChartComponent,
     GroupBoxComponent,
-    FileUploaderComponent
+    FileUploaderComponent,
+    LineChartComponent,
   ],
 })
 export class AppCommonModule {}

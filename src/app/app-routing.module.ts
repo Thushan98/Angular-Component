@@ -68,6 +68,26 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'charts',
+    data: { breadcrumb: 'Charts' },
+    children: [
+      {
+        path: 'barchart',
+        loadChildren: () =>
+          import('./module/barchart/barchart.module').then(
+            (m) => m.BarchartModule
+          ),
+      },
+      {
+        path: 'linechart',
+        loadChildren: () =>
+          import('./module/linechart/linechart.module').then(
+            (m) => m.LinechartModule
+          ),
+      },
+    ],
+  },
 ];
 
 @NgModule({
