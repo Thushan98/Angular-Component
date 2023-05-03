@@ -8,9 +8,8 @@ describe('GrpBoxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GrpBoxComponent ]
-    })
-    .compileComponents();
+      declarations: [GrpBoxComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GrpBoxComponent);
     component = fixture.componentInstance;

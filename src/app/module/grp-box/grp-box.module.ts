@@ -6,18 +6,14 @@ import { GrpBoxRoutingModule } from './grp-box-routing.module';
 import { GrpBoxComponent } from './grp-box.component';
 import { AppCommonModule } from 'src/app/common-components/app-common.module';
 
-
 @NgModule({
-  declarations: [
-    GrpBoxComponent
-  ],
+  declarations: [GrpBoxComponent],
   imports: [
     CommonModule,
     GrpBoxRoutingModule,
     AppCommonModule,
     FormsModule,
-    ReactiveFormsModule
-
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class GrpBoxModule { }
+export class GrpBoxModule {}

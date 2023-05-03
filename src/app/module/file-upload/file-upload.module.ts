@@ -9,9 +9,7 @@ import { FileUploadComponent } from './file-upload.component';
 import { AppCommonModule } from 'src/app/common-components/app-common.module';
 
 @NgModule({
-  declarations: [
-    FileUploadComponent
-  ],
+  declarations: [FileUploadComponent],
   imports: [
     CommonModule,
     FileUploadRoutingModule,
@@ -19,7 +17,7 @@ import { AppCommonModule } from 'src/app/common-components/app-common.module';
     ReactiveFormsModule,
     FormsModule,
     AppCommonModule,
-    RouterModule
-  ]
+    RouterModule,
+  ],
 })
-export class FileUploadModule { }
+export class FileUploadModule {}

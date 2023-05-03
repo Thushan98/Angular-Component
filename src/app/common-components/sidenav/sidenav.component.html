@@ -112,7 +112,9 @@
             class="side-nav__item"
             [class.side-nav__item--active]="child?.isActive"
             (click)="onItemClick(child)"
-            routerLink="{{ child.routerLink }}" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="{{ child.routerLink }}"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
           >
             <span
               *ngIf="child?.isActive"

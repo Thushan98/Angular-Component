@@ -9,9 +9,7 @@ import { FormArrayComponent } from './form-array.component';
 import { AppCommonModule } from 'src/app/common-components/app-common.module';
 
 @NgModule({
-  declarations: [
-    FormArrayComponent,
-  ],
+  declarations: [FormArrayComponent],
   imports: [
     CommonModule,
     FormArrayRoutingModule,
@@ -19,7 +17,7 @@ import { AppCommonModule } from 'src/app/common-components/app-common.module';
     AppCommonModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
-  ]
+    RouterModule,
+  ],
 })
 export class FormArrayModule {}

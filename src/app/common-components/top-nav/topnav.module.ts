@@ -6,9 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [TopNavComponent],
-  imports: [
-    CommonModule, OverlayModule, MatButtonModule
-  ], 
-  exports: [TopNavComponent]
+  imports: [CommonModule, OverlayModule, MatButtonModule],
+  exports: [TopNavComponent],
 })
-export class TopnavModule { }
+export class TopnavModule {}

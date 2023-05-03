@@ -30,7 +30,7 @@ import { TopnavModule } from './common-components/top-nav/topnav.module';
     AppCommonModule,
     SidenavModule,
     TopnavModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

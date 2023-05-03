@@ -1,4 +1,4 @@
-.types{
+.types {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-half);
@@ -13,22 +13,22 @@
     margin: var(--spacing-quarter);
   }
 
-
- &__buttonBar {
-  //position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 4px;
-
-  &__save-button {
+  &__buttonBar {
+    //position: absolute;
+    top: 0;
+    right: 0;
     margin-right: 4px;
-    &:hover {
-      background-color: var(--color-g-night);
+
+    &__save-button {
+      margin-right: 4px;
+      &:hover {
+        background-color: var(--color-g-night);
+      }
+    }
+    &__reset-button {
+      &:hover {
+        background-color: var(--color-n-reset);
+      }
     }
   }
-  &__reset-button {
-    &:hover {
-      background-color: var(--color-n-reset);
-    }
-  }
-}}
+}

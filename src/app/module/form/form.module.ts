@@ -9,9 +9,7 @@ import { FormComponent } from './form.component';
 import { AppCommonModule } from 'src/app/common-components/app-common.module';
 
 @NgModule({
-  declarations: [
-    FormComponent,
-  ],
+  declarations: [FormComponent],
   imports: [
     CommonModule,
     FormRoutingModule,
@@ -19,7 +17,7 @@ import { AppCommonModule } from 'src/app/common-components/app-common.module';
     ReactiveFormsModule,
     FormsModule,
     AppCommonModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [],
 })

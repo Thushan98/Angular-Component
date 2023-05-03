@@ -1,4 +1,8 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ViewEncapsulation,
+} from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -10,7 +14,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class FormComponent {
   constructor(private readonly formBuilder: FormBuilder) {}
-
 
   formDetail = this.formBuilder.group({
     name: '',

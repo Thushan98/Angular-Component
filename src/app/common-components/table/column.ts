@@ -1,6 +1,6 @@
 export interface Column {
-    columnDef: string;
-    header: string;
-    // eslint-disable-next-line @typescript-eslint/ban-types
-    cell: Function;
+  columnDef: string;
+  header: string;
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  cell: Function;
 }

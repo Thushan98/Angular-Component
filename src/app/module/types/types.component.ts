@@ -35,36 +35,36 @@ export class TypesComponent implements OnInit {
   items: Option[] = [
     {
       id: 1,
-      name: "abc"
+      name: 'abc',
     },
     {
       id: 2,
-      name: "abcd"
+      name: 'abcd',
     },
     {
       id: 3,
-      name: "abcefg"
+      name: 'abcefg',
     },
     {
       id: 4,
-      name: "abchilk"
+      name: 'abchilk',
     },
     {
       id: 5,
-      name: "abcefg"
+      name: 'abcefg',
     },
     {
       id: 6,
-      name: "abchilk"
-    }
-  ]
+      name: 'abchilk',
+    },
+  ];
 
   typeDetail = this.formBuilder.group({
     country: '',
   });
 
   customTypeDetail = this.formBuilder.group({
-    school: ''
+    school: '',
   });
 
   resetForm() {
@@ -75,7 +75,7 @@ export class TypesComponent implements OnInit {
     console.log(this.typeDetail.value);
     this.resetForm();
   }
-  onOptionSelected(option1: any){
-    console.log(option1)
+  onOptionSelected(option1: any) {
+    console.log(option1);
   }
 }

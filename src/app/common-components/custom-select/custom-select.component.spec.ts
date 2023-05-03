@@ -8,9 +8,8 @@ describe('CustomSelectComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomSelectComponent ]
-    })
-    .compileComponents();
+      declarations: [CustomSelectComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CustomSelectComponent);
     component = fixture.componentInstance;

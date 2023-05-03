@@ -8,9 +8,8 @@ describe('GroupBoxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GroupBoxComponent ]
-    })
-    .compileComponents();
+      declarations: [GroupBoxComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GroupBoxComponent);
     component = fixture.componentInstance;

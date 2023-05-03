@@ -7,14 +7,7 @@ import { BarchartComponent } from './barchart.component';
 import { AppCommonModule } from 'src/app/common-components/app-common.module';
 
 @NgModule({
-  declarations: [
-    BarchartComponent
-  ],
-  imports: [
-    CommonModule,
-    BarchartRoutingModule,
-    RouterModule,
-    AppCommonModule
-  ]
+  declarations: [BarchartComponent],
+  imports: [CommonModule, BarchartRoutingModule, RouterModule, AppCommonModule],
 })
-export class BarchartModule { }
+export class BarchartModule {}

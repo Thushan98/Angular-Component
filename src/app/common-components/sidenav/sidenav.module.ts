@@ -6,12 +6,15 @@ import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-
 @NgModule({
   declarations: [DSSidenavComponent],
   imports: [
-    CommonModule, A11yModule, RouterModule, MatIconModule, MatTooltipModule
+    CommonModule,
+    A11yModule,
+    RouterModule,
+    MatIconModule,
+    MatTooltipModule,
   ],
-  exports: [DSSidenavComponent]
+  exports: [DSSidenavComponent],
 })
-export class SidenavModule { }
+export class SidenavModule {}

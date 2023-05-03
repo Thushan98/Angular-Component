@@ -5,15 +5,8 @@ import { MatTableRoutingModule } from './mat-table-routing.module';
 import { MatTableComponent } from './mat-table.component';
 import { AppCommonModule } from 'src/app/common-components/app-common.module';
 
-
 @NgModule({
-  declarations: [
-    MatTableComponent
-  ],
-  imports: [
-    CommonModule,
-    MatTableRoutingModule,
-    AppCommonModule
-  ]
+  declarations: [MatTableComponent],
+  imports: [CommonModule, MatTableRoutingModule, AppCommonModule],
 })
-export class MatTableModule { }
+export class MatTableModule {}

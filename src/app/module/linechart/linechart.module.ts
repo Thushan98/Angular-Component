@@ -6,13 +6,7 @@ import { LinechartComponent } from './linechart.component';
 import { AppCommonModule } from 'src/app/common-components/app-common.module';
 
 @NgModule({
-  declarations: [
-    LinechartComponent
-  ],
-  imports: [
-    CommonModule,
-    LinechartRoutingModule,
-    AppCommonModule
-  ]
+  declarations: [LinechartComponent],
+  imports: [CommonModule, LinechartRoutingModule, AppCommonModule],
 })
-export class LinechartModule { }
+export class LinechartModule {}
