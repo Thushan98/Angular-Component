@@ -36,7 +36,7 @@ export class FileUploaderComponent implements ControlValueAccessor {
   @Input() maxSize!: number;
   @Output() error: EventEmitter<string> = new EventEmitter<string>();
 
-  errorMsg: any = '';
+  errorMsg: unknown = '';
 
   OnFileSelect(event: any) {
     const file = event.target.files[0];

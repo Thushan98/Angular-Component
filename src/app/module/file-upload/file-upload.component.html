@@ -1,12 +1,33 @@
-<app-wrapper>
-  <span appOutletLeft>
-    <form>
-      <label>Profile Image</label>
-      <app-file-uploader
-        [acceptedFile]="acceptedFile"
-        [maxSize]="5000000"
-      ></app-file-uploader>
-    </form>
-  </span>
-  <span appOutletRight></span>
-</app-wrapper>
+<div class="file-upload">
+  <app-wrapper>
+    <span class="file-upload__left" appOutletLeft>
+      <form [formGroup]="formImage">
+        <label>Profile Image</label>
+        <app-file-uploader
+          [acceptedFile]="acceptedFile"
+          [maxSize]="5000000"
+          formControlName="image"
+          id="image"
+        ></app-file-uploader>
+      </form>
+    </span>
+    <span appOutletRight></span>
+    <span class="buttonBar" appOutletButton>
+      <button
+        mat-raised-button
+        color="primary"
+        class="buttonBar__save-button"
+        (click)="saveDetails()"
+      >
+        Save
+      </button>
+      <button
+        mat-raised-button
+        class="buttonBar__reset-button"
+        (click)="resetForm()"
+      >
+        Reset
+      </button>
+    </span>
+  </app-wrapper>
+</div>
