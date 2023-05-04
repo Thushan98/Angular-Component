@@ -18,6 +18,7 @@ import { GroupBoxComponent } from './group-box/group-box.component';
 import { FileUploaderComponent } from './file-uploader/file-uploader.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
+import { ErrorValidationComponent } from './error-validation/error-validation.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LineChartComponent } from './line-chart/line-chart.component';
     FileUploaderComponent,
     BarChartComponent,
     LineChartComponent,
+    ErrorValidationComponent,
   ],
   imports: [
     CommonModule,
@@ -56,6 +58,7 @@ import { LineChartComponent } from './line-chart/line-chart.component';
     GroupBoxComponent,
     FileUploaderComponent,
     LineChartComponent,
+    ErrorValidationComponent
   ],
 })
 export class AppCommonModule {}
