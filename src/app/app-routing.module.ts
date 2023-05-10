@@ -88,6 +88,14 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'banner',
+    data: { breadcrumb: 'banner' },
+    loadChildren: () =>
+      import('./module/ad-banner/ad-banner.module').then(
+        (m) => m.AdBannerModule
+      ),
+  },
 ];
 
 @NgModule({

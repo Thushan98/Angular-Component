@@ -114,5 +114,21 @@ export class SidebarComponent {
         },
       ],
     },
+    {
+      id: 7,
+      label: 'Banner',
+      isActive: true,
+      icon: 'group_add',
+      category: 'Banner',
+      children: [{
+        id: 71,
+        label: 'banners',
+        routerLink: 'banner',
+        onClick: () => {
+          this.router.navigateByUrl('banner');
+        },
+      }]
+      
+    },
   ];
 }

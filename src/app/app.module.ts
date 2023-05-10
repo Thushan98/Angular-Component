@@ -14,9 +14,10 @@ import { SidebarComponent } from './common-components/sidebar/sidebar.component'
 import { AppCommonModule } from './common-components/app-common.module';
 import { SidenavModule } from './common-components/sidenav/sidenav.module';
 import { TopnavModule } from './common-components/top-nav/topnav.module';
+import { AdBannerDirective } from './directives/ad-banner/ad-banner.directive';
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent],
+  declarations: [AppComponent, SidebarComponent, AdBannerDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,
