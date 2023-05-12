@@ -15,7 +15,7 @@ export class SidebarComponent {
       id: 1,
       label: 'Forms',
       isActive: true,
-      icon: 'group_add',
+      icon: 'description',
       category: 'Forms',
       children: [
         {
@@ -35,7 +35,7 @@ export class SidebarComponent {
       label: 'Types',
       isActive: true,
       category: 'Types',
-      icon: 'group_add',
+      icon: 'checklist_rtl',
       children: [
         {
           id: 21,
@@ -57,7 +57,7 @@ export class SidebarComponent {
       id: 3,
       label: 'Tables',
       isActive: true,
-      icon: 'group_add',
+      icon: 'table',
       category: 'Tables',
       children: [
         {
@@ -85,7 +85,7 @@ export class SidebarComponent {
       id: 5,
       label: 'Uploader',
       isActive: true,
-      icon: 'group_add',
+      icon: 'upload_file',
       category: 'Uploaders',
       children: [
         {
@@ -99,7 +99,7 @@ export class SidebarComponent {
       id: 6,
       label: 'Charts',
       isActive: true,
-      icon: 'group_add',
+      icon: 'insights',
       category: 'Charts',
       children: [
         {

@@ -41,10 +41,10 @@ select {
   height: var(--spacing-one-and-half);
   background-color: var(--color-n-input);
   font-size: var(--font-size-one);
-  font-family: "Noto Sans", Roboto;
+  font-family: "Noto Sans", "Roboto";
 
   &:hover {
-    background-color: var(--color-g-40);
+    background-color: var(--color-g-20);
     border-color: var(--color-g-dark);
   }
 }

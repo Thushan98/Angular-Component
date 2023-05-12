@@ -34,7 +34,7 @@ import { ErrorValidationComponent } from './error-validation/error-validation.co
     FileUploaderComponent,
     BarChartComponent,
     LineChartComponent,
-    ErrorValidationComponent,
+    ErrorValidationComponent
   ],
   imports: [
     CommonModule,
