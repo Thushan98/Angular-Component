@@ -8,11 +8,11 @@ import Chart from 'chart.js/auto';
 })
 export class LineChartComponent implements OnInit {
   ngOnInit(): void {
-    this.createChart();
+    this.createCharts();
   }
   public lineChart: any;
 
-  createChart() {
+  createCharts() {
     this.lineChart = new Chart('MyChart', {
       type: 'line',
       data: {
