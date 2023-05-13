@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-nav',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./top-nav.component.scss'],
 })
 export class TopNavComponent {
+  constructor(private router: Router) {}
+
+  onLoginButtonClick() {
+    this.router.navigate(['/login']);
+  }
+
   tabs = [
     {
       name: 'Home',
