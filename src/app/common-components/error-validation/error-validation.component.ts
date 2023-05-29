@@ -16,9 +16,7 @@ export class ErrorValidationComponent {
   get errorMsg(): string | null {
     if (this.control.errors !== null) {
       for (const property in this.control.errors) {
-        // eslint-disable-next-line no-prototype-builtins
         if (
-          // eslint-disable-next-line no-prototype-builtins
           this.control.errors.hasOwnProperty(property) &&
           this.control.touched
         ) {

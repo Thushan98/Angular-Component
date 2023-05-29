@@ -1,5 +1,5 @@
 # AngularComponent
-
+This repo contains several re-usable component created using angular. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
 ## Development server

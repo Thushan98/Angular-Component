@@ -40,7 +40,6 @@ export class BreadcrumbsComponent implements OnInit, OnDestroy {
     url = '',
     breadcrumbs: BreadCrumbs[] = []
   ): BreadCrumbs[] {
-    //if no routeconfig is available we arre on the root path
     let label =
       route.routeConfig && route.routeConfig.data
         ? route.routeConfig.data['breadcrumb']
@@ -48,7 +47,6 @@ export class BreadcrumbsComponent implements OnInit, OnDestroy {
     let path =
       route.routeConfig && route.routeConfig.path ? route.routeConfig.path : '';
 
-    //if the route is dynamic route such as :id, remove it
     const lastRoutePart = path.split('/').pop() || '';
     const isDynamicRoute = lastRoutePart.startsWith(':');
     if (isDynamicRoute && !!route.snapshot) {
@@ -57,13 +55,11 @@ export class BreadcrumbsComponent implements OnInit, OnDestroy {
       label = route.snapshot.params[paraName];
     }
 
-    //in routeconfig the complete path is not availble rebuild it each time
     const nextUrl = path ? `${url}/${path}` : url;
     const breadcrumb: BreadCrumbs = {
       label: label,
       url: nextUrl,
     };
-    //only add route non-empty label
 
     const newBreadcrumbs = breadcrumb.label
       ? [...breadcrumbs, breadcrumb]

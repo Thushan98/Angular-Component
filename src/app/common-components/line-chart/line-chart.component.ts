@@ -16,7 +16,6 @@ export class LineChartComponent implements OnInit {
     this.lineChart = new Chart('MyChart', {
       type: 'line',
       data: {
-        // values on X-Axis
         labels: [
           '2022-05-10',
           '2022-05-11',

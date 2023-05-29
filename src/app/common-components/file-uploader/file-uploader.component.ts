@@ -2,11 +2,9 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  ElementRef,
   EventEmitter,
   Input,
   Output,
-  ViewChild,
   ViewEncapsulation,
   forwardRef,
 } from '@angular/core';
@@ -57,9 +55,7 @@ export class FileUploaderComponent implements ControlValueAccessor {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   public onChange = (_: unknown) => {};
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   public onTouched = () => {};
 
   writeValue(value: any): void {

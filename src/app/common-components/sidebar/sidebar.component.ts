@@ -41,15 +41,6 @@ export class SidebarComponent {
           id: 21,
           label: 'Type 1',
           routerLink: 'types/type',
-          // children: [
-          //   {
-          //     id: 211,
-          //     label: 'Grand Child',
-          //     onClick: () => {
-          //       this.router.navigateByUrl('');
-          //     },
-          //   },
-          // ],
         },
       ],
     },

@@ -9,7 +9,6 @@
   min-width: calc(var(--spacing-one) * 12.5);
   overflow: hidden;
   background-color: var(--color-background);
-  //background-color: yellowgreen;
   border-right: var(--border-width-s) solid var(--color-n-borders);
   user-select: none;
   -webkit-touch-callout: none;
@@ -74,7 +73,7 @@
           width: var(--spacing-three-and-half);
           overflow: hidden;
           display: flex;
-          align-items: end;
+          align-items: flex-end;
 
           & hr {
             width: var(--spacing-three-and-half);

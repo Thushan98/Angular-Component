@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { BooleanInput } from '@angular/cdk/coercion';
 import {
   ChangeDetectionStrategy,
