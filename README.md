@@ -1,5 +1,5 @@
 # AngularComponent
-
+THis is reusable component I have created using Angular, SCSS with BEM rules and Angular material. Need to modify. Currently hosted in https://thushan98.github.io/Angular-Component/. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
 ## Development server
